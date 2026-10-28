@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-container {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #5b4baf;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #5b4baf;
+    font-weight: bold;
+}
+
+#question {
+    font-size: 21px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: #667eea;
+    background: #f3f2ff;
+}
+
+.option-btn:disabled {
+    cursor: default;
+}
+
+.option-btn.correct {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.option-btn.wrong {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+button {
+    font-family: inherit;
+}
+
+#next-btn,
+#restart-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    background: #5b4baf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#next-btn:hover:not(:disabled),
+#restart-btn:hover {
+    background: #46358f;
+}
+
+#next-btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+#result-box {
+    text-align: center;
+}
+
+#result-box h2 {
+    color: #5b4baf;
+    margin-bottom: 15px;
+}
+
+#final-score {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .quiz-container {
+        padding: 20px;
+    }
+
+    #question {
+        font-size: 18px;
+    }
+
+    .option-btn {
+        font-size: 14px;
+    }
+}
